@@ -6,7 +6,6 @@ Pod::Spec.new do |s|
   s.description  = "MPV video processing library, easy to use."
 
   s.homepage     = "https://github.com/midoks/LibMpv"
-  s.license      = "MIT (example)"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "midoks" => "midoks@163.com" }
 
@@ -19,6 +18,8 @@ Pod::Spec.new do |s|
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
+  # s.dependency 'LibFfmpeg'
+
   s.source       = { :git => "https://github.com/midoks/LibMpv.git", :tag => "#{s.version}", :submodules => true }
 
   s.default_subspec = 'precompiled'
@@ -28,8 +29,7 @@ Pod::Spec.new do |s|
     ss.public_header_files = 'source/include/**/*.h'
     ss.header_mappings_dir = 'source/include'
     ss.vendored_libraries  = 'source/lib/*.dylib'
-    # ss.frameworks  = 'AVFoundation', 'VideoToolbox', 'AudioToolbox', 'CoreVideo', 'CoreMedia'
-    # ss.libraries =  ''
+    ss.library = 'mpv.1'
   end
 
 end
