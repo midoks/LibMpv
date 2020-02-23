@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
-  s.source       = { :git => "https://github.com/midoks/LibMpv.git", :tag => "#{s.version}" :submodules => true }
+  s.source       = { :git => "https://github.com/midoks/LibMpv.git", :tag => "#{s.version}", :submodules => true }
 
   s.default_subspec = 'precompiled'
   
@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
     ss.source_files        = 'source/include/**/*.h'
     ss.public_header_files = 'source/include/**/*.h'
     ss.header_mappings_dir = 'source/include'
-    ss.vendored_libraries  = 'source/lib/*.a'
-    ss.frameworks  = 'AVFoundation', 'VideoToolbox', 'AudioToolbox', 'CoreVideo', 'CoreMedia'
-    ss.libraries =  'iconv', 'lzma', 'bz2', 'z', 'avcodec', 'avdevice', 'avfilter', 'avformat', 'avutil', 'swresample', 'swscale'
+    ss.vendored_libraries  = 'source/lib/*.dylib'
+    # ss.frameworks  = 'AVFoundation', 'VideoToolbox', 'AudioToolbox', 'CoreVideo', 'CoreMedia'
+    # ss.libraries =  ''
   end
 
 end
