@@ -2,7 +2,8 @@ Pod::Spec.new do |s|
 
   s.name         = "LibMpv"
   s.version      = "0.0.1"
-  s.summary      = "A short description of LibMpv."
+  s.summary      = "MPV video processing library."
+  s.description  = "MPV video processing library, easy to use."
 
   s.homepage     = "https://github.com/midoks/LibMpv"
   s.license      = "MIT (example)"
